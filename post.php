@@ -44,24 +44,35 @@ if (isLoggedIn()) {
     $user_id = $_SESSION['user_id'];
     $today = date('Y-m-d');
     
-    // Check if user already viewed this post today
-    $stmt = $db->prepare("
-        SELECT id FROM post_views 
-        WHERE post_id = ? AND user_id = ? AND DATE(created_at) = ?
-    ");
-    $stmt->execute([$post['id'], $user_id, $today]);
-    
-    if (!$stmt->fetch()) {
-        // Add view record
+    try {
+        // Check if user already viewed this post today
         $stmt = $db->prepare("
-            INSERT INTO post_views (post_id, user_id, ip_address) 
-            VALUES (?, ?, ?)
+            SELECT id FROM post_views 
+            WHERE post_id = ? AND user_id = ? AND DATE(created_at) = ?
         ");
-        $stmt->execute([$post['id'], $user_id, getClientIP()]);
+        $stmt->execute([$post['id'], $user_id, $today]);
         
-        // Update post views count
-        $stmt = $db->prepare("UPDATE posts SET views = views + 1 WHERE id = ?");
-        $stmt->execute([$post['id']]);
+        if (!$stmt->fetch()) {
+            // Verify user exists before adding view
+            $user_check = $db->prepare("SELECT id FROM users WHERE id = ?");
+            $user_check->execute([$user_id]);
+            
+            if ($user_check->fetch()) {
+                // Add view record
+                $stmt = $db->prepare("
+                    INSERT INTO post_views (post_id, user_id, ip_address) 
+                    VALUES (?, ?, ?)
+                ");
+                $stmt->execute([$post['id'], $user_id, getClientIP()]);
+                
+                // Update post views count
+                $stmt = $db->prepare("UPDATE posts SET views = views + 1 WHERE id = ?");
+                $stmt->execute([$post['id']]);
+            }
+        }
+    } catch (Exception $e) {
+        // Log error but don't break the page
+        error_log("Post view tracking error: " . $e->getMessage());
     }
 }
 

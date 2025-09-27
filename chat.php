@@ -43,8 +43,14 @@ try {
         if (!empty($message) && strlen($message) <= 1000) {
             $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
             
-            $stmt = $db->prepare("INSERT INTO chat_messages (user_id, message, created_at) VALUES (?, ?, NOW())");
-            $stmt->execute([$user_id, $message]);
+            // Verify user exists before inserting message
+            $user_check = $db->prepare("SELECT id FROM users WHERE id = ?");
+            $user_check->execute([$user_id]);
+            
+            if ($user_check->fetch()) {
+                $stmt = $db->prepare("INSERT INTO chat_messages (user_id, message, created_at) VALUES (?, ?, NOW())");
+                $stmt->execute([$user_id, $message]);
+            }
             
             // Regenerate CSRF token after use
             CSRFToken::generate();
@@ -192,10 +198,10 @@ try {
             
             <div class="chat-input">
                 <?php if ($is_logged_in): ?>
-                    <form method="POST" class="input-group">
+                    <form method="POST" class="input-group" id="chatForm">
                         <?php echo CSRFToken::field(); ?>
                         <textarea name="message" class="message-input" placeholder="Type your message..." 
-                                  maxlength="1000" required></textarea>
+                                  maxlength="1000" required id="messageInput"></textarea>
                         <button type="submit" name="send_message" class="send-btn">📤 Send</button>
                     </form>
                 <?php else: ?>
@@ -318,12 +324,72 @@ try {
             });
         }
         
-        // Auto-refresh messages every 30 seconds
+        // Auto-refresh messages every 10 seconds without page reload
         setInterval(function() {
-            if (!isLoading) {
-                location.reload();
+            if (!isLoading && document.visibilityState === 'visible') {
+                loadNewMessages();
             }
-        }, 30000);
+        }, 10000);
+        
+        // Load new messages function
+        function loadNewMessages() {
+            const lastMessageId = getLastMessageId();
+            
+            fetch(`chat.php?load_new_messages=1&last_id=${lastMessageId}`)
+                .then(response => response.json())
+                .then(messages => {
+                    if (messages.length > 0) {
+                        const messagesContainer = document.getElementById('messagesContainer');
+                        const chatMessages = document.getElementById('chatMessages');
+                        const wasAtBottom = chatMessages.scrollTop + chatMessages.clientHeight >= chatMessages.scrollHeight - 5;
+                        
+                        messages.forEach(msg => {
+                            const messageDiv = createMessageElement(msg);
+                            messagesContainer.appendChild(messageDiv);
+                        });
+                        
+                        // Auto-scroll if user was at bottom
+                        if (wasAtBottom) {
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading new messages:', error);
+                });
+        }
+        
+        function getLastMessageId() {
+            const messages = document.querySelectorAll('.message[data-message-id]');
+            if (messages.length > 0) {
+                return messages[messages.length - 1].getAttribute('data-message-id');
+            }
+            return 0;
+        }
+        
+        function createMessageElement(msg) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${msg.user_id == <?php echo $user_id ?? 0; ?> ? 'own' : ''}`;
+            messageDiv.setAttribute('data-message-id', msg.id);
+            
+            const avatar = msg.profile_image ? 
+                `<?php echo UPLOAD_PATH; ?>profiles/${msg.profile_image}` : 
+                'assets/default-avatar.jpg';
+            
+            messageDiv.innerHTML = `
+                <img src="${avatar}" alt="Avatar" class="message-avatar" 
+                     onerror="this.src='assets/default-avatar.jpg'">
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-username">${msg.username}</span>
+                        <span class="message-time">${msg.time}</span>
+                    </div>
+                    <div class="message-text">${msg.message.replace(/\n/g, '<br>')}</div>
+                </div>
+            `;
+            
+            return messageDiv;
+        }
         
         console.log('[v0] Chat page loaded successfully');
     </script>

@@ -1,7 +1,6 @@
 <?php
-// Database Auto Starter - Creates all required tables automatically using MySQLi
-// This version includes root connection to create the database user and fixes foreign key issues
-// Fill in the root password below, run once, then remove or blank it for security
+// Enhanced Database Auto Starter - Creates all required tables automatically
+// This version fixes all foreign key issues and creates a robust database structure
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -17,12 +16,12 @@ $charset = 'utf8mb4';
 $root_username = 'root';
 $root_password = ''; // <-- SET YOUR MYSQL ROOT PASSWORD HERE TEMPORARILY, THEN REMOVE IT
 
-echo "🚀 Starting Database Auto Setup...\n";
-echo "=====================================\n";
+echo "🚀 Starting Enhanced Database Auto Setup...\n";
+echo "==========================================\n";
 
-// All SQL statements for table creation
+// Enhanced SQL statements for table creation with proper foreign key handling
 $allSqlStatements = [
-    // Users table
+    // Users table (must be created first as it's referenced by other tables)
     "CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) UNIQUE NOT NULL,
@@ -39,15 +38,17 @@ $allSqlStatements = [
         last_login TIMESTAMP NULL,
         INDEX idx_username (username),
         INDEX idx_email (email),
-        INDEX idx_created_at (created_at)
-    )",
+        INDEX idx_created_at (created_at),
+        INDEX idx_is_admin (is_admin),
+        INDEX idx_is_banned (is_banned)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Blog posts table
     "CREATE TABLE IF NOT EXISTS posts (
         id INT AUTO_INCREMENT PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
         slug VARCHAR(255) UNIQUE NOT NULL,
-        content TEXT NOT NULL,
+        content LONGTEXT NOT NULL,
         keywords VARCHAR(500),
         featured_image VARCHAR(255),
         author_id INT,
@@ -56,13 +57,14 @@ $allSqlStatements = [
         likes INT DEFAULT 0,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE SET NULL,
-        FULLTEXT(title, content, keywords),
         INDEX idx_status (status),
         INDEX idx_author (author_id),
         INDEX idx_created_at (created_at),
-        INDEX idx_slug (slug)
-    )",
+        INDEX idx_slug (slug),
+        INDEX idx_views (views),
+        FULLTEXT(title, content, keywords),
+        CONSTRAINT fk_posts_author FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE SET NULL ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Post likes table
     "CREATE TABLE IF NOT EXISTS post_likes (
@@ -70,26 +72,26 @@ $allSqlStatements = [
         post_id INT NOT NULL,
         user_id INT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
         UNIQUE KEY unique_like (post_id, user_id),
         INDEX idx_post_id (post_id),
-        INDEX idx_user_id (user_id)
-    )",
+        INDEX idx_user_id (user_id),
+        CONSTRAINT fk_likes_post FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE ON UPDATE CASCADE,
+        CONSTRAINT fk_likes_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
-    // Post views table
+    // Post views table (user_id can be NULL for anonymous views)
     "CREATE TABLE IF NOT EXISTS post_views (
         id INT AUTO_INCREMENT PRIMARY KEY,
         post_id INT NOT NULL,
-        user_id INT,
+        user_id INT NULL,
         ip_address VARCHAR(45),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL,
         INDEX idx_post_user_date (post_id, user_id, created_at),
         INDEX idx_post_ip_date (post_id, ip_address, created_at),
-        INDEX idx_created_at (created_at)
-    )",
+        INDEX idx_created_at (created_at),
+        CONSTRAINT fk_views_post FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE ON UPDATE CASCADE,
+        CONSTRAINT fk_views_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Comments table
     "CREATE TABLE IF NOT EXISTS comments (
@@ -98,12 +100,12 @@ $allSqlStatements = [
         user_id INT NOT NULL,
         content TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
         INDEX idx_post_id (post_id),
         INDEX idx_user_id (user_id),
-        INDEX idx_created_at (created_at)
-    )",
+        INDEX idx_created_at (created_at),
+        CONSTRAINT fk_comments_post FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE ON UPDATE CASCADE,
+        CONSTRAINT fk_comments_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Chat messages table
     "CREATE TABLE IF NOT EXISTS chat_messages (
@@ -111,10 +113,10 @@ $allSqlStatements = [
         user_id INT NOT NULL,
         message TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
         INDEX idx_user_id (user_id),
-        INDEX idx_created_at (created_at)
-    )",
+        INDEX idx_created_at (created_at),
+        CONSTRAINT fk_chat_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Site statistics table
     "CREATE TABLE IF NOT EXISTS site_stats (
@@ -124,7 +126,7 @@ $allSqlStatements = [
         unique_visitors INT DEFAULT 0,
         page_views INT DEFAULT 0,
         INDEX idx_date (date)
-    )",
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Contact messages table
     "CREATE TABLE IF NOT EXISTS contact_messages (
@@ -134,8 +136,9 @@ $allSqlStatements = [
         phone VARCHAR(20),
         message TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        INDEX idx_created_at (created_at)
-    )",
+        INDEX idx_created_at (created_at),
+        INDEX idx_email (email)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // DDoS protection table
     "CREATE TABLE IF NOT EXISTS ddos_bans (
@@ -147,8 +150,9 @@ $allSqlStatements = [
         is_permanent TINYINT(1) DEFAULT 0,
         ban_count INT DEFAULT 1,
         INDEX idx_ip (ip_address),
-        INDEX idx_expires (ban_expires)
-    )",
+        INDEX idx_expires (ban_expires),
+        INDEX idx_permanent (is_permanent)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Request tracking table
     "CREATE TABLE IF NOT EXISTS request_tracking (
@@ -159,8 +163,9 @@ $allSqlStatements = [
         request_method VARCHAR(10) DEFAULT 'GET',
         user_agent TEXT,
         request_uri VARCHAR(255),
-        INDEX idx_ip_time (ip_address, last_request)
-    )",
+        INDEX idx_ip_time (ip_address, last_request),
+        INDEX idx_method (request_method)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Email verification table
     "CREATE TABLE IF NOT EXISTS email_verifications (
@@ -173,10 +178,11 @@ $allSqlStatements = [
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         INDEX idx_email_code (email, code),
         INDEX idx_expires (expires_at),
-        INDEX idx_type (type)
-    )",
+        INDEX idx_type (type),
+        INDEX idx_used (used)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
-    // Security logs table
+    // Security logs table (user_id can be NULL for anonymous events)
     "CREATE TABLE IF NOT EXISTS security_logs (
         id INT AUTO_INCREMENT PRIMARY KEY,
         ip_address VARCHAR(45) NOT NULL,
@@ -187,8 +193,10 @@ $allSqlStatements = [
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         INDEX idx_ip_time (ip_address, created_at),
         INDEX idx_event_type (event_type),
-        INDEX idx_created_at (created_at)
-    )",
+        INDEX idx_created_at (created_at),
+        INDEX idx_user_id (user_id),
+        CONSTRAINT fk_security_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Failed login attempts table
     "CREATE TABLE IF NOT EXISTS failed_logins (
@@ -198,8 +206,9 @@ $allSqlStatements = [
         attempt_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         user_agent TEXT,
         INDEX idx_ip_time (ip_address, attempt_time),
-        INDEX idx_username (username)
-    )",
+        INDEX idx_username (username),
+        INDEX idx_attempt_time (attempt_time)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
     
     // Session security table
     "CREATE TABLE IF NOT EXISTS secure_sessions (
@@ -210,26 +219,30 @@ $allSqlStatements = [
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         last_activity TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         is_active BOOLEAN DEFAULT TRUE,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
         INDEX idx_user_id (user_id),
-        INDEX idx_last_activity (last_activity)
-    )"
+        INDEX idx_last_activity (last_activity),
+        INDEX idx_is_active (is_active),
+        CONSTRAINT fk_sessions_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
 ];
 
-// Insert statements (corrected to ensure valid user_id references)
+// Insert statements with proper user creation first
 $insertStatements = [
-    // Admin user (ensures at least one valid user exists)
-    "INSERT INTO users (username, email, password, is_admin, email_verified, verification_code) VALUES 
-    ('admin', 'admin-sunatullo@gmail.com', '\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, 1, NULL)
-    ON DUPLICATE KEY UPDATE 
-        email = 'admin-sunatullo@gmail.com',
-        is_admin = 1,
-        email_verified = 1,
-        verification_code = NULL",
+    // Create admin user first (this ensures user_id=1 exists)
+    "INSERT IGNORE INTO users (id, username, email, password, is_admin, email_verified, profile_image) VALUES 
+    (1, 'admin', 'admin@gmail.com', '\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, 1, 'default-avatar.jpg')",
     
-    // Sample posts (references admin user with id=1)
-    "INSERT INTO posts (title, slug, content, keywords, author_id, status, featured_image) VALUES 
-    ('🚀 Complete Web Development Guide 2025', 'complete-web-development-guide-2025', 
+    // Create admin-blog user (this ensures user_id=2 exists)
+    "INSERT IGNORE INTO users (id, username, email, password, is_admin, email_verified, profile_image) VALUES 
+    (2, 'admin-blog', 'admin-blog@gmail.com', '\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, 1, 'default-avatar.jpg')",
+    
+    // Create sample regular user (this ensures user_id=3 exists)
+    "INSERT IGNORE INTO users (id, username, email, password, is_admin, email_verified, profile_image) VALUES 
+    (3, 'testuser', 'testuser@gmail.com', '\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 1, 'default-avatar.jpg')",
+    
+    // Sample posts (now references existing users)
+    "INSERT IGNORE INTO posts (id, title, slug, content, keywords, author_id, status, featured_image, views) VALUES 
+    (1, '🚀 Complete Web Development Guide 2025', 'complete-web-development-guide-2025', 
     '<div style=\"text-align: center; margin-bottom: 2rem;\">
         <img src=\"https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\" alt=\"Web Development\" style=\"width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);\">
     </div>
@@ -250,7 +263,7 @@ $insertStatements = [
     <pre style=\"background: linear-gradient(145deg, #1e293b, #334155); color: #e2e8f0; padding: 24px; border-radius: 12px; overflow-x: auto; margin: 2rem 0; box-shadow: 0 8px 25px rgba(0,0,0,0.2);\"><code>// Modern JavaScript Example
 const fetchUserData = async (userId) => {
     try {
-        const response = await fetch(`/api/users/$ {userId}`);
+        const response = await fetch(`/api/users/\${userId}`);
         const userData = await response.json();
         
         return {
@@ -279,50 +292,41 @@ fetchUserData(123).then(result => {
                 style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;\" 
                 allowfullscreen></iframe>
     </div>', 
-    'web development, programming, javascript, html, css, tutorial, 2025, guide, coding, frontend, backend', 1, 'published', 'default.png')
-    ON DUPLICATE KEY UPDATE title=title",
+    'web development, programming, javascript, html, css, tutorial, 2025, guide, coding, frontend, backend', 1, 'published', 'default.png', 150)",
     
-    // Sample chat messages (references admin user with id=1)
-    "INSERT INTO chat_messages (user_id, message) VALUES 
+    // Sample chat messages (references existing users)
+    "INSERT IGNORE INTO chat_messages (user_id, message) VALUES 
     (1, 'Welcome to our amazing chat system! 👋'),
     (1, 'Feel free to start conversations here and connect with other users.'),
-    (1, 'This chat supports real-time messaging with infinite scroll - try it out!')
-    ON DUPLICATE KEY UPDATE message=message",
+    (2, 'This chat supports real-time messaging with infinite scroll - try it out!')",
     
-    // Sample post view (uses NULL for user_id to avoid constraint violation)
-    "INSERT INTO post_views (post_id, user_id, ip_address) VALUES 
-    (1, NULL, '127.0.0.1')
-    ON DUPLICATE KEY UPDATE created_at=CURRENT_TIMESTAMP",
-    
-    // Sample comment (references admin user with id=1)
-    "INSERT INTO comments (post_id, user_id, content) VALUES 
-    (1, 1, 'Great post! Looking forward to more content like this.')
-    ON DUPLICATE KEY UPDATE content=content",
+    // Sample comments (references existing users and posts)
+    "INSERT IGNORE INTO comments (post_id, user_id, content) VALUES 
+    (1, 2, 'Great post! Looking forward to more content like this.'),
+    (1, 3, 'Very helpful tutorial. Thanks for sharing!')",
     
     // Sample site stats
-    "INSERT INTO site_stats (date, visits, unique_visitors, page_views) VALUES 
-    (CURDATE(), 10, 5, 20)
-    ON DUPLICATE KEY UPDATE visits=visits+10, unique_visitors=unique_visitors+5, page_views=page_views+20",
+    "INSERT IGNORE INTO site_stats (date, visits, unique_visitors, page_views) VALUES 
+    (CURDATE(), 25, 15, 45),
+    (DATE_SUB(CURDATE(), INTERVAL 1 DAY), 30, 20, 60),
+    (DATE_SUB(CURDATE(), INTERVAL 2 DAY), 35, 25, 70)",
     
     // Sample contact message
-    "INSERT INTO contact_messages (name, email, phone, message) VALUES 
-    ('John Doe', 'john.doe@example.com', '1234567890', 'This is a test contact message.')
-    ON DUPLICATE KEY UPDATE message=message",
+    "INSERT IGNORE INTO contact_messages (name, email, phone, message) VALUES 
+    ('John Doe', 'john.doe@gmail.com', '1234567890', 'This is a test contact message from the blog system.')",
     
-    // Sample security log
-    "INSERT INTO security_logs (ip_address, event_type, description, user_id) VALUES 
-    ('127.0.0.1', 'login', 'Admin user logged in', 1)
-    ON DUPLICATE KEY UPDATE description=description",
+    // Sample security log (references existing user)
+    "INSERT IGNORE INTO security_logs (ip_address, event_type, description, user_id) VALUES 
+    ('127.0.0.1', 'LOGIN', 'Admin user logged in successfully', 1),
+    ('127.0.0.1', 'INFO', 'System initialized successfully', NULL)",
     
     // Sample failed login attempt
-    "INSERT INTO failed_logins (ip_address, username, user_agent) VALUES 
-    ('127.0.0.1', 'testuser', 'Mozilla/5.0')
-    ON DUPLICATE KEY UPDATE attempt_time=CURRENT_TIMESTAMP",
+    "INSERT IGNORE INTO failed_logins (ip_address, username, user_agent) VALUES 
+    ('192.168.1.100', 'wronguser', 'Mozilla/5.0 (Test Browser)')",
     
-    // Sample session
-    "INSERT INTO secure_sessions (session_id, user_id, ip_address, user_agent_hash) VALUES 
-    ('sample_session_123', 1, '127.0.0.1', 'hash_example')
-    ON DUPLICATE KEY UPDATE last_activity=CURRENT_TIMESTAMP"
+    // Sample session (references existing user)
+    "INSERT IGNORE INTO secure_sessions (session_id, user_id, ip_address, user_agent_hash) VALUES 
+    ('sample_session_123456', 1, '127.0.0.1', 'hash_example_123')"
 ];
 
 try {
@@ -370,7 +374,7 @@ try {
         $root_mysqli->close();
         echo "✅ Root setup complete - disconnected\n";
     } else {
-        echo "ℹ️ Root password not set - assuming database user already exists. If not, set \$root_password and rerun.\n";
+        echo "ℹ️ Root password not set - assuming database user already exists\n";
     }
     
     // Connect as the regular user
@@ -381,15 +385,17 @@ try {
     }
     echo "✅ Connected to MySQL server as '$username'\n";
     
-    // Set charset
+    // Set charset and SQL mode
     if (!$mysqli->set_charset($charset)) {
         throw new Exception("Error setting charset: " . $mysqli->error);
     }
     
-    echo "✅ Using database '$db_name'\n";
+    // Disable foreign key checks temporarily for clean setup
+    $mysqli->query("SET FOREIGN_KEY_CHECKS = 0");
     
+    echo "✅ Using database '$db_name'\n";
     echo "📊 Found " . count($allSqlStatements) . " table creation statements\n";
-    echo "=====================================\n";
+    echo "==========================================\n";
     
     $successCount = 0;
     $skipCount = 0;
@@ -401,9 +407,7 @@ try {
             if ($mysqli->query($statement)) {
                 $successCount++;
                 if (preg_match('/CREATE TABLE.*?`?(\w+)`?/i', $statement, $matches)) {
-                    echo "✅ Created table: {$matches[1]}\n";
-                } else {
-                    echo "✅ Executed: " . substr($statement, 0, 50) . "...\n";
+                    echo "✅ Created/verified table: {$matches[1]}\n";
                 }
             } else {
                 if (strpos($mysqli->error, 'already exists') !== false) {
@@ -413,16 +417,19 @@ try {
                     }
                 } else {
                     $errorCount++;
-                    echo "⚠️  Error: " . $mysqli->error . "\n";
+                    echo "⚠️  Table creation error: " . $mysqli->error . "\n";
                 }
             }
         } catch (Exception $e) {
             $errorCount++;
-            echo "⚠️  Error: " . $e->getMessage() . "\n";
+            echo "⚠️  Table creation exception: " . $e->getMessage() . "\n";
         }
     }
     
-    echo "=====================================\n";
+    // Re-enable foreign key checks
+    $mysqli->query("SET FOREIGN_KEY_CHECKS = 1");
+    
+    echo "==========================================\n";
     echo "📊 Executing insert statements...\n";
     
     // Execute insert statements
@@ -430,11 +437,11 @@ try {
         try {
             if ($mysqli->query($statement)) {
                 $successCount++;
-                if (preg_match('/INSERT INTO.*?`?(\w+)`?/i', $statement, $matches)) {
+                if (preg_match('/INSERT.*?INTO.*?`?(\w+)`?/i', $statement, $matches)) {
                     echo "✅ Inserted data into: {$matches[1]}\n";
                 }
             } else {
-                if (strpos($mysqli->error, 'Duplicate entry') !== false) {
+                if (strpos($mysqli->error, 'Duplicate entry') !== false || strpos($mysqli->error, 'duplicate key') !== false) {
                     $skipCount++;
                     echo "ℹ️  Skipped duplicate entry\n";
                 } else {
@@ -444,26 +451,47 @@ try {
             }
         } catch (Exception $e) {
             $errorCount++;
-            echo "⚠️  Insert error: " . $e->getMessage() . "\n";
+            echo "⚠️  Insert exception: " . $e->getMessage() . "\n";
         }
     }
     
-    // Create default image if it doesn't exist
-    $defaultImagePath = '../Uploads/posts/default.png';
-    if (!file_exists($defaultImagePath)) {
-        $uploadsDir = '../Uploads/posts';
-        if (!is_dir($uploadsDir)) {
-            mkdir($uploadsDir, 0755, true);
+    // Create upload directories
+    $uploadDirs = [
+        '../uploads',
+        '../uploads/posts', 
+        '../uploads/profiles',
+        '../assets'
+    ];
+    
+    foreach ($uploadDirs as $dir) {
+        if (!is_dir($dir)) {
+            if (@mkdir($dir, 0755, true)) {
+                echo "✅ Created directory: $dir\n";
+            } else {
+                echo "⚠️  Failed to create directory: $dir\n";
+            }
         }
-        
-        // Create a simple default image (1x1 transparent PNG)
+    }
+    
+    // Create default avatar if it doesn't exist
+    $defaultAvatarPath = '../assets/default-avatar.jpg';
+    if (!file_exists($defaultAvatarPath)) {
+        // Create a simple 1x1 transparent image as placeholder
         $defaultImageData = base64_decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==');
-        file_put_contents($defaultImagePath, $defaultImageData);
-        echo "✅ Created default image: uploads/posts/default.png\n";
+        @file_put_contents($defaultAvatarPath, $defaultImageData);
+        echo "✅ Created default avatar: assets/default-avatar.jpg\n";
     }
     
-    echo "=====================================\n";
-    echo "🎉 Database setup completed!\n";
+    // Create default post image if it doesn't exist
+    $defaultPostImagePath = '../uploads/posts/default.png';
+    if (!file_exists($defaultPostImagePath)) {
+        $defaultImageData = base64_decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==');
+        @file_put_contents($defaultPostImagePath, $defaultImageData);
+        echo "✅ Created default post image: uploads/posts/default.png\n";
+    }
+    
+    echo "==========================================\n";
+    echo "🎉 Enhanced Database setup completed!\n";
     echo "✅ Successful operations: $successCount\n";
     echo "ℹ️  Skipped (already exists): $skipCount\n";
     echo "⚠️  Errors: $errorCount\n";
@@ -498,60 +526,57 @@ try {
             if ($result) {
                 $count = $result->fetch_row()[0];
                 echo "   📋 $table: $count records\n";
-            } else {
-                echo "   ❌ $table: Error reading\n";
             }
         } catch (Exception $e) {
             echo "   ❌ $table: Error reading - " . $e->getMessage() . "\n";
         }
     }
     
-    // Test admin user
-    echo "\n👤 Checking admin user...\n";
-    $result = $mysqli->query("SELECT username, email, is_admin FROM users WHERE is_admin = 1 LIMIT 1");
-    if ($result && $adminCheck = $result->fetch_assoc()) {
-        echo "✅ Admin user found: {$adminCheck['username']} ({$adminCheck['email']})\n";
-        echo "🔑 Admin login: admin / admin2025\n";
-    } else {
-        echo "⚠️  No admin user found\n";
+    // Test admin users
+    echo "\n👤 Checking admin users...\n";
+    $result = $mysqli->query("SELECT id, username, email, is_admin FROM users WHERE is_admin = 1");
+    if ($result) {
+        while ($adminCheck = $result->fetch_assoc()) {
+            echo "✅ Admin user found: {$adminCheck['username']} (ID: {$adminCheck['id']}, Email: {$adminCheck['email']})\n";
+        }
+        echo "🔑 Admin login credentials:\n";
+        echo "   - Username: admin-blog | Password: admin2025\n";
+        echo "   - Username: admin | Password: password\n";
     }
     
-    // Check for invalid user_id references
-    echo "\n🔍 Checking for invalid user_id references...\n";
-    $invalid_users_check = $mysqli->query("
-        SELECT DISTINCT user_id 
-        FROM (
-            SELECT user_id FROM post_views WHERE user_id IS NOT NULL
-            UNION
-            SELECT user_id FROM chat_messages
-            UNION
-            SELECT user_id FROM comments
-            UNION
-            SELECT user_id FROM post_likes
-            UNION
-            SELECT user_id FROM secure_sessions
-        ) AS combined
-        WHERE user_id NOT IN (SELECT id FROM users)
+    // Verify foreign key constraints
+    echo "\n🔗 Verifying foreign key constraints...\n";
+    $fk_check = $mysqli->query("
+        SELECT 
+            TABLE_NAME,
+            COLUMN_NAME,
+            CONSTRAINT_NAME,
+            REFERENCED_TABLE_NAME,
+            REFERENCED_COLUMN_NAME
+        FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+        WHERE REFERENCED_TABLE_SCHEMA = '$db_name' 
+        AND REFERENCED_TABLE_NAME IS NOT NULL
     ");
     
-    if ($invalid_users_check && $invalid_users_check->num_rows > 0) {
-        echo "⚠️ Found invalid user_id references:\n";
-        while ($row = $invalid_users_check->fetch_assoc()) {
-            echo "   - Invalid user_id: {$row['user_id']}\n";
+    if ($fk_check) {
+        $fk_count = 0;
+        while ($fk = $fk_check->fetch_assoc()) {
+            $fk_count++;
+            echo "   🔗 {$fk['TABLE_NAME']}.{$fk['COLUMN_NAME']} → {$fk['REFERENCED_TABLE_NAME']}.{$fk['REFERENCED_COLUMN_NAME']}\n";
         }
-        echo "ℹ️ Consider cleaning up these records or adding corresponding users.\n";
-    } else {
-        echo "✅ No invalid user_id references found.\n";
+        echo "✅ Total foreign key constraints: $fk_count\n";
     }
     
-    echo "\n🎯 Setup complete! Your blog system is ready to use.\n";
+    echo "\n🎯 Enhanced setup complete! Your blog system is ready to use.\n";
     echo "🌐 You can now access:\n";
     echo "   - Main site: index.php\n";
-    echo "   - Admin panel: panel.php\n";
+    echo "   - Admin panel: panel.php (admin-blog / admin2025)\n";
     echo "   - Chat system: chat.php\n";
+    echo "   - User registration: auth/register.php\n";
     
     // Close the connection
     $mysqli->close();
+    
 } catch (Exception $e) {
     echo "❌ Critical Error: " . $e->getMessage() . "\n";
     if (isset($mysqli) && $mysqli instanceof mysqli) {
