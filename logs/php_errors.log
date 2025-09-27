@@ -1,0 +1,863 @@
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Created directory: uploads/profiles
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Created directory: error_pages
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:28 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:35 Europe/Moscow] [EXCEPTION] UNCAUGHT EXCEPTION: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`post_views`, CONSTRAINT `post_views_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL)
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:35 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:35 Europe/Moscow] [EXCEPTION] UNCAUGHT EXCEPTION: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`post_views`, CONSTRAINT `post_views_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL)
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:38 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:38 Europe/Moscow] [EXCEPTION] UNCAUGHT EXCEPTION: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`post_views`, CONSTRAINT `post_views_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL)
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:40 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Created directory: uploads
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Created directory: uploads/posts
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Created directory: uploads/profiles
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Created directory: logs
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Created directory: error_pages
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:55 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:55 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:20:55 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:20:55 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:20:55 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:20:55 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:20:55 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:20:55 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:20:59 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:21:06 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:21:12 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:21:12 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:21:44 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:21:44 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:22:15 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:22:15 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:22:46 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:22:46 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:23:17 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:23:17 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:23:48 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:23:48 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:24:19 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:24:19 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:24:50 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:24:50 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:25:21 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:25:21 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:25:52 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:25:52 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:26:23 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:26:23 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:26:54 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:26:54 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:05 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:05 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:13 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:17 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:17 Europe/Moscow] [EXCEPTION] UNCAUGHT EXCEPTION: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`post_views`, CONSTRAINT `post_views_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL)
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:20 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Created directory: uploads
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Created directory: uploads/posts
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Created directory: uploads/profiles
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Created directory: logs
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Created directory: error_pages
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:21 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:25 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:36 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:39 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:45 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:52 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:27:52 Europe/Moscow] Chat error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`stacknro_blog`.`chat_messages`, CONSTRAINT `chat_messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:27:58 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:27:58 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:27:58 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:27:58 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:27:58 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:27:58 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:27:58 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:27:58 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:22 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:22 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:22 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:22 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:22 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:22 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:22 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:22 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:33 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:33 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:33 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:33 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:33 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:33 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:33 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:33 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:28:35 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] User 2 is logged in
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:37 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:37 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:37 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:37 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:37 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:37 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:37 Europe/Moscow] [WARNING] WARNING: Trying to access array offset on false
+[27-Sep-2025 19:28:37 Europe/Moscow] [UNKNOWN ERROR] UNKNOWN ERROR: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Redirecting to: ../index.php
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:41 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:28:50 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Login page accessed
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Successfully loaded: ../includes/security.php
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:29:06 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:29:08 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:29:08 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:29:08 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:29:08 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:29:08 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:29:08 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:29:37 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:29:39 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:29:39 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:29:39 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:29:39 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:29:39 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:29:39 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:30:49 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:30:49 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:30:49 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:30:49 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:30:49 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:30:49 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:30:54 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:30:54 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:30:54 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:30:54 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:30:54 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:30:54 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:31:26 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:31:29 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:31:29 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:31:29 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:31:29 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:31:29 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:31:29 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:31:55 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Login page accessed
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Successfully loaded: ../includes/security.php
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:31:58 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Login page accessed
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Successfully loaded: ../includes/security.php
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Login form submitted
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Login attempt for: admin-blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Query executed successfully: 
+                    SELECT id, username, email, password, is_admin, is_banned, profile_image 
+     
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] User found: admin-blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Password verification successful for user: admin-blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Query executed successfully: UPDATE users SET last_login = NOW() WHERE id = ?
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] User logged in successfully: admin-blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Redirecting to: ../index.php
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:09 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:14 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:17 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:21 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:24 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:30 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:33 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:36 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:39 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:40 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:44 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:45 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:48 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:53 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:32:54 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:24 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:31 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:35 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:33:53 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] Database connection established
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:34:12 Europe/Moscow] [INFO] User 3 is logged in
+[27-Sep-2025 19:35:01 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:35:01 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:35:01 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:35:01 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:35:01 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:35:18 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:35:18 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:35:18 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:35:18 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:35:18 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:35:18 Europe/Moscow] [WARNING] Failed admin login attempt: admin
+[27-Sep-2025 19:35:31 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:35:31 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:35:31 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:35:31 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:35:31 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:35:31 Europe/Moscow] [WARNING] Failed admin login attempt: admin
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Admin panel access by: admin-blog
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Created directory: uploads
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Created directory: uploads/posts
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Created directory: uploads/profiles
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Created directory: logs
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Created directory: error_pages
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:35:47 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:05 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:10 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:19 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:35 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:36:41 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Session started successfully
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Successfully loaded: /home/s/stacknro/stacknest.site/public_html/blogpost/config/database.php
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] System initialized successfully
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Database constructor called with host: localhost, db: stacknro_blog
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Attempting database connection (attempt 1)
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Database connection successful
+[27-Sep-2025 19:40:12 Europe/Moscow] [INFO] Generated slug: hammaga-salom from text: hammaga-salom
+[27-Sep-2025 19:40:12 Europe/Moscow] [EXCEPTION] UNCAUGHT EXCEPTION: SQLSTATE[HY000]: General error: 3988 Conversion from collation utf8mb4_0900_ai_ci into utf8mb3_general_ci impossible for parameter
