@@ -234,7 +234,8 @@ try {
                             ?>
                             <img src="<?php echo $image_path; ?>" 
                                  alt="<?php echo htmlspecialchars($post['title']); ?>" 
-                                 class="post-image">
+                                 class="post-image"
+                                 onerror="this.src='uploads/posts/default.png'">
                             
                             <div class="post-content">
                                 <h2 class="post-title">
@@ -251,7 +252,8 @@ try {
                                         }
                                     }
                                     ?>
-                                    <img src="<?php echo $profile_image; ?>" alt="Author" class="author-avatar">
+                                    <img src="<?php echo $profile_image; ?>" alt="Author" class="author-avatar"
+                                         onerror="this.src='assets/default-avatar.jpg'">
                                     <span>By <strong><?php echo htmlspecialchars($post['username'] ?? 'Unknown'); ?></strong></span>
                                     <span>•</span>
                                     <span><?php echo date('M j, Y', strtotime($post['created_at'])); ?></span>
@@ -284,7 +286,7 @@ try {
                             <div class="post-actions" onclick="event.stopPropagation();">
                                 <button class="like-btn" onclick="toggleLike(<?php echo $post['id']; ?>, this)" 
                                         data-post-id="<?php echo $post['id']; ?>">
-                                    <span class="like-icon">❤️</span>
+                                    <span class="like-icon">🤍</span>
                                     <span class="like-count"><?php echo number_format($post['likes_count'] ?? 0); ?></span>
                                 </button>
                                 
@@ -410,6 +412,9 @@ try {
             <?php endif; ?>
             
             try {
+                // Prevent multiple clicks
+                button.disabled = true;
+                
                 const formData = new FormData();
                 formData.append('post_id', postId);
                 
@@ -439,6 +444,8 @@ try {
             } catch (error) {
                 console.error('Error:', error);
                 alert('Network error occurred');
+            } finally {
+                button.disabled = false;
             }
         }
         
@@ -447,8 +454,9 @@ try {
             const modal = document.getElementById('commentModal');
             const modalBody = document.getElementById('commentModalBody');
             
-            modalBody.innerHTML = '<div style="text-align: center; padding: 2rem;">Loading comments...</div>';
+            modalBody.innerHTML = '<div style="text-align: center; padding: 2rem;"><div class="loading"></div><p>Loading comments...</p></div>';
             modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
             
             // Load comments via AJAX
             fetch(`api/get_comments.php?post_id=${postId}`)
@@ -464,11 +472,19 @@ try {
         function closeCommentModal() {
             const modal = document.getElementById('commentModal');
             modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scroll
         }
         
         // Close modal when clicking outside
         document.getElementById('commentModal').addEventListener('click', function(e) {
             if (e.target === this) {
+                closeCommentModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
                 closeCommentModal();
             }
         });

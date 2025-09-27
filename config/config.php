@@ -156,10 +156,10 @@ function sanitize($data, $type = 'string') {
                 $sanitized = filter_var($data, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
                 break;
             default:
-                $sanitized = htmlspecialchars(strip_tags(trim($data)), ENT_QUOTES, 'UTF-8');
+                $sanitized = htmlspecialchars(strip_tags(trim((string)$data)), ENT_QUOTES, 'UTF-8');
         }
         
-        return $sanitized;
+        return $sanitized ?: '';
     } catch (Exception $e) {
         logError("Sanitization failed for type $type: " . $e->getMessage(), 'ERROR');
         return '';

@@ -158,63 +158,6 @@ try {
             min-height: 100vh;
         }
         
-        .admin-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .admin-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .admin-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            text-decoration: none;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .admin-nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 1rem;
-        }
-        
-        .admin-nav-links a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .admin-nav-links a:hover {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .admin-nav-links a.active {
-            background: rgba(255,255,255,0.3);
-            color: white;
-        }
-        
         .dashboard-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -447,18 +390,7 @@ try {
     </style>
 </head>
 <body>
-    <div class="admin-header">
-        <nav class="admin-nav">
-            <a href="dashboard.php" class="admin-logo">⚙️ <?php echo SITE_NAME; ?> Admin</a>
-            <ul class="admin-nav-links">
-                <li><a href="dashboard.php" class="active">📊 Dashboard</a></li>
-                <li><a href="posts.php">📝 Posts</a></li>
-                <li><a href="users.php">👥 Users</a></li>
-                <li><a href="security.php">🔒 Security</a></li>
-                <li><a href="../auth/logout.php">🚪 Logout</a></li>
-            </ul>
-        </nav>
-    </div>
+    <?php include '../includes/header.php'; ?>
 
     <div class="dashboard-container">
         <h1 class="dashboard-title">📊 Admin Dashboard</h1>
@@ -532,10 +464,10 @@ try {
                             <tbody>
                                 <?php foreach ($recent_posts as $post): ?>
                                 <tr>
-                                    <td><?php echo htmlspecialchars(substr($post['title'], 0, 30)); ?>...</td>
+                                    <td><?php echo htmlspecialchars(substr($post['title'] ?? 'Untitled', 0, 30)); ?>...</td>
                                     <td><?php echo htmlspecialchars($post['username'] ?? 'Unknown'); ?></td>
                                     <td><?php echo date('M j', strtotime($post['created_at'])); ?></td>
-                                    <td><?php echo number_format($post['views']); ?></td>
+                                    <td><?php echo number_format($post['views'] ?? 0); ?></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </tbody>
@@ -565,8 +497,8 @@ try {
                             <tbody>
                                 <?php foreach ($recent_users as $user): ?>
                                 <tr>
-                                    <td><?php echo htmlspecialchars($user['username']); ?></td>
-                                    <td><?php echo htmlspecialchars($user['email']); ?></td>
+                                    <td><?php echo htmlspecialchars($user['username'] ?? 'Unknown'); ?></td>
+                                    <td><?php echo htmlspecialchars($user['email'] ?? 'No email'); ?></td>
                                     <td><?php echo date('M j', strtotime($user['created_at'])); ?></td>
                                 </tr>
                                 <?php endforeach; ?>
